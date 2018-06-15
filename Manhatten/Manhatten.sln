@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manhatten", "Manhatten\Manhatten.csproj", "{46D9D019-5DA0-4DB9-A1F3-BB313C5A0350}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManhattenTest", "ManhattenTest\ManhattenTest.csproj", "{159D1357-81B2-444F-803A-8BA62352808C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46D9D019-5DA0-4DB9-A1F3-BB313C5A0350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46D9D019-5DA0-4DB9-A1F3-BB313C5A0350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46D9D019-5DA0-4DB9-A1F3-BB313C5A0350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46D9D019-5DA0-4DB9-A1F3-BB313C5A0350}.Release|Any CPU.Build.0 = Release|Any CPU
+		{159D1357-81B2-444F-803A-8BA62352808C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{159D1357-81B2-444F-803A-8BA62352808C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{159D1357-81B2-444F-803A-8BA62352808C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{159D1357-81B2-444F-803A-8BA62352808C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D737B8D4-7EAB-4B60-94B1-E66076CEF51A}
+	EndGlobalSection
+EndGlobal
