@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Collections;
+using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using System.Text;
 
 
 namespace Manhatten
 {
-	public class ListItem
+	public class Features
 	{
 		/// <summary>
 		/// getters and setters for card values
 		/// </summary>
-		public Suite Suite { get; set; }
+		public Feature Feature{ get; set; }
 		public Value Value { get; set; }
 
 	}
@@ -19,7 +20,7 @@ namespace Manhatten
 	/// <summary>
 	/// enumerator values for Suite type
 	/// </summary>
-	public enum Suite
+	public enum Feature
 	{
 		Hearts,
 		Diamonds,
