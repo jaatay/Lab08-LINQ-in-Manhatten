@@ -1,10 +1,10 @@
 # Lab08-LINQ-in-Manhatten
 
 ## About this project
-This project is building a deck of cards using lists and the IEnumerable interface. Within the program, there are seperate classes for card types and deck behavior. The program initializes a deck of cards, and will soon add the ability to add a card to the deck, remove a card from the deck, and shuffle the deck.
+This project takes and parses a JSON file. The goal is to be able to find an available property through LINQ queries and lambda expressions. The methods return the results as strings.
 
 ## Example
-![LINQ screenshot](ScreenShot.jpg)
+![LINQ screenshot](LINQ.jpg)
 ![Whiteboard screenhot](Whiteboard.jpg)
 
 ## How to use
@@ -13,3 +13,7 @@ This program requires Visual Studio. Once the repo has been cloned to the user's
 
 ## Licensing
 This program is available under the MIT license.
+
+## Acknowledgements
+[jcqnly](https://github.com/jcqnly)
+[steph](https://github.com/IndigoShock)
