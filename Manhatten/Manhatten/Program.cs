@@ -26,26 +26,52 @@ namespace Manhatten
 				string json;
 				json = r.ReadToEnd();
 
-				dynamic mainObject = JsonConvert.DeserializeObject(json);
+				RootObject mainObject = JsonConvert.DeserializeObject<RootObject>(json);
 
-				RootObject newObject = new RootObject
+				var neighborhoods = from i in mainObject.Features
+									select i.Properties.Neighborhood;
+
+				Console.WriteLine("--------All neighborhoods--------");
+				foreach (var item in neighborhoods)
 				{
-					Type = mainObject.type,
-					Features = mainObject.features
-				};
-
-				Geometry testObject = new Geometry
-				{
-					Type = mainObject.features[0].type,
-					Coordinates = mainObject.features[0].geometry
-				};
-
 				
-				Console.WriteLine(newObject.Features);
+					Console.WriteLine(item);
+				}
 
-				Console.WriteLine(newObject);
+				var namedNeighborhoods = from i in neighborhoods
+										 where i != ""
+										 select i;
 
-				Console.WriteLine(testObject.Coordinates);
+				Console.WriteLine("-------All named neighborhoods-------");
+				foreach (var item in namedNeighborhoods)
+				{
+					
+					Console.WriteLine(item);
+				}
+
+				var uniqueNeighborhoods = from x in namedNeighborhoods
+										  group x by x into RandomlyNamedGroup
+										  orderby RandomlyNamedGroup.Key
+										  select RandomlyNamedGroup.Key;
+
+				Console.WriteLine("-------All unique neighborhoods-------");
+				
+				foreach(var item in uniqueNeighborhoods)
+					Console.WriteLine(item);
+
+
+				var oneLinqToRuleThemAll = from i in mainObject.Features
+										   where i.Properties.Neighborhood != ""
+										   group i.Properties.Neighborhood by i.Properties.Neighborhood
+											into allTheThings
+										   select allTheThings.Key;
+
+				Console.WriteLine("---------------All In One Query -----------------");
+				foreach(var item in oneLinqToRuleThemAll)
+				{
+					Console.WriteLine(item);
+				}
+
 
 			}
 

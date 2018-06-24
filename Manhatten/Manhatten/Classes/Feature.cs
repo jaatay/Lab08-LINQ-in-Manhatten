@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Manhatten
 {
-    class Feature
+    public class Feature
     {
 		[JsonProperty("type")]
 		public string Type { get; set; }

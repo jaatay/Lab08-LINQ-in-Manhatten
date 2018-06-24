@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 namespace Manhatten
 {
-    class Properties
+    public class Properties
     {
 		[JsonProperty("zip")]
 		public string Zip { get; set; }

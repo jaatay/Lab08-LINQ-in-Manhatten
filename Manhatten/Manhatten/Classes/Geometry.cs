@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Manhatten
 {
-    class Geometry
+   public class Geometry
     {
 			[JsonProperty("type")]
 			public string Type { get; set; }

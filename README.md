@@ -6,6 +6,7 @@ This project takes and parses a JSON file. The goal is to be able to find an ava
 ## Example
 ![LINQ screenshot](LINQ.jpg)
 ![Whiteboard screenhot](Whiteboard.jpg)
+![In action screenshot](UniqueHood.jpg)
 
 ## How to use
 This program requires Visual Studio. Once the repo has been cloned to the user's local machine, they simply need to navigate to the solution folder, and open the solution using Visual Studio. Then, run the program.cs file. After that, follow the prompts. The test file can be opened via the test solution also located in the project directory.
