@@ -28,7 +28,7 @@ namespace Manhatten
 
 				dynamic mainObject = JsonConvert.DeserializeObject(json);
 
-				ManhattenObject newObject = new ManhattenObject
+				RootObject newObject = new RootObject
 				{
 					Type = mainObject.type,
 					Features = mainObject.features

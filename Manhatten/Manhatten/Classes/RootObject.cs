@@ -8,14 +8,13 @@ using System.Text;
 namespace Manhatten
 {
 
-	public class ManhattenObject
+	public class RootObject
 	{
-		[JsonProperty]
+		[JsonProperty("type")]
 		public string Type { get; set; }
 
-		[JsonProperty]
-		public IList Features { get; set; }
-
+		[JsonProperty("features")]
+		public List<Feature> Features { get; set; }
 
 	}
 		

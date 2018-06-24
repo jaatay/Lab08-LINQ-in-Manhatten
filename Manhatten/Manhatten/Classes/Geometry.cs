@@ -9,12 +9,11 @@ namespace Manhatten
 {
     class Geometry
     {
-		
-			[JsonProperty]
+			[JsonProperty("type")]
 			public string Type { get; set; }
 
-			[JsonProperty]
-			public IList Coordinates { get; set; }
+			[JsonProperty("coordinates")]
+			public List<double> Coordinates { get; set; }
 
 
 		
