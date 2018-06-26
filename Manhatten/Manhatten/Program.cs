@@ -14,13 +14,15 @@ namespace Manhatten
 		{
 			Console.WriteLine("Hello World!");
 			LoadList();
+			Console.WriteLine("Press any key to exit");
+			Console.ReadLine();
 		}
 
 		public static void LoadList()
 
 		{
-
-			using (StreamReader r = new StreamReader("Manhatten.json"))
+			string path = "../../../Manhatten.json";
+			using (StreamReader r = new StreamReader(path))
 			{
 
 				string json;
@@ -60,14 +62,12 @@ namespace Manhatten
 					Console.WriteLine(item);
 
 
-				var oneLinqToRuleThemAll = from i in mainObject.Features
-										   where i.Properties.Neighborhood != ""
-										   group i.Properties.Neighborhood by i.Properties.Neighborhood
-											into allTheThings
-										   select allTheThings.Key;
+				var oneLambdaToRuleThemAll = mainObject.Features.Where(n => n.Properties.Neighborhood != "")
+														  .GroupBy(g => g.Properties.Neighborhood)
+														  .Select(s => s.Key);
 
 				Console.WriteLine("---------------All In One Query -----------------");
-				foreach(var item in oneLinqToRuleThemAll)
+				foreach(var item in oneLambdaToRuleThemAll)
 				{
 					Console.WriteLine(item);
 				}
